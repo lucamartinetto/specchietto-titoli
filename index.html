@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eef1f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c111b" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Prezzo e andamento dei titoli investiti e osservati">
+  <title>Specchietto titoli</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Specchietto titoli</h1>
+      <div class="stamp" id="stamp">Carico le quotazioni…</div>
+    </div>
+    <button class="refresh" id="refresh" type="button" aria-label="Aggiorna le quotazioni adesso">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+      <span>Aggiorna</span>
+    </button>
+  </header>
+
+  <div id="status" hidden></div>
+
+  <section class="group" id="g-investito">
+    <div class="ghead"><h2>Investiti</h2><span id="c-investito"></span></div>
+    <div class="panel" id="l-investito">
+      <div class="row"><div class="info"><div class="skel" style="width:60%"></div><div class="skel" style="width:40%"></div></div></div>
+      <div class="row"><div class="info"><div class="skel" style="width:55%"></div><div class="skel" style="width:35%"></div></div></div>
+    </div>
+  </section>
+
+  <section class="group" id="g-osservato">
+    <div class="ghead"><h2>Osservati</h2><span id="c-osservato"></span></div>
+    <div class="panel" id="l-osservato">
+      <div class="row"><div class="info"><div class="skel" style="width:50%"></div><div class="skel" style="width:30%"></div></div></div>
+    </div>
+  </section>
+
+  <div class="notes" id="notes">
+    <div>Prezzi convertiti in euro. Le variazioni sono calcolate sul prezzo unitario, senza importi investiti. Le quotazioni di borsa possono avere fino a 15 minuti di ritardo; i fondi pubblicano un solo NAV al giorno.</div>
+  </div>
+</div>
+<noscript>Per usare l'app serve JavaScript attivo.</noscript>
+</body>
+</html>
